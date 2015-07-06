@@ -72,3 +72,27 @@ for line in range(0, 240):
     for column in range(0, 416):
         print(matrixY[line, column])
 '''
+
+'''
+                            # Teste Arvore Huffman
+dicio = {'a': 5, 'b': 4, 'c': 3, 'd': 2, 'e': 1}
+arv = ArvoreHuffman(dicio)
+arv.create_tree()
+'''
+
+'''
+                            # Salva optimized_frames como imagens cinza
+
+grey = optimized_frames[0].matrixY.astype('uint8')
+greyIm = Im.fromarray(grey, "L")
+greyIm.save("saved_img/" + "frameOpt0" + ".bmp")
+grey = optimized_frames[4].matrixY.astype('uint8')
+greyIm = Im.fromarray(grey, "L")
+greyIm.save("saved_img/" + "frameOpt1" + ".bmp")
+grey = optimized_frames[7].matrixY.astype('uint8')
+greyIm = Im.fromarray(grey, "L")
+greyIm.save("saved_img/" + "frameOpt2" + ".bmp")
+grey = optimized_frames[9].matrixY.astype('uint8')
+greyIm = Im.fromarray(grey, "L")
+greyIm.save("saved_img/" + "frameOpt3" + ".bmp")
+'''

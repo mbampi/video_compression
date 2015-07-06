@@ -9,9 +9,9 @@ class Nodo:
         self.dir = None
 
 
+class ArvoreHuffman:
 
-class ArvoreBinaria:
-
+# Recebe dicionario e atribui a Nodos
     def __init__(self, dicionario):
         self.raiz = None
         self.num = 0
@@ -25,7 +25,7 @@ class ArvoreBinaria:
             self.vetor.append(new_nodo)
             x += 1
 
-
+# Faz arvore de Huffman baseada no dicionario
     def create_tree(self):
         while len(self.vetor) > 1:
             self.vetor.sort()
@@ -34,9 +34,3 @@ class ArvoreBinaria:
             new_nodo.esq = self.vetor.pop()
             new_nodo.dir = self.vetor.pop()
             self.vetor.append(new_nodo)
-
-
-
-dicio = {'a': 5, 'b': 4, 'c': 3, 'd': 2, 'e': 1}
-arv = ArvoreBinaria(dicio)
-arv.create_tree()
