@@ -10,7 +10,7 @@
 
 
 from collections import Counter
-from BinaryTree import ArvoreHuffman
+from HuffmanTree import ArvoreHuffman
 from Frame import Frame
 
 
@@ -26,12 +26,17 @@ def create_optimized_frames():
         f.create_optimized_matrix(frames[x], frames[x+1])
         optimized_frames.append(f)
 
+
 # MAIN
 
 frames = []
 optimized_frames = []
 create_frames()
 create_optimized_frames()
-repetition_count = optimized_frames[0].repetition_counter()
+dictionary = optimized_frames[0].repetition_counter()
 # repetition_count = Counter(repetition_count).most_common()  # Organiza por valores (>)
-print(repetition_count)
+print(dictionary)
+
+arv = ArvoreHuffman(dictionary)
+arv.create_tree()
+arv.gera_codigo()

@@ -119,11 +119,3 @@ class Frame:
                     self.matrixCr[line, column] = frame2.matrixCr[line, column]
 
 
-'''
-# Atribui 0 para valores iguais   (on create_optimized_matrix_y())
-
- if frame1.matrixY[line, column] == frame2.matrixY[line, column]:
-    self.matrixY[line, column] = 0
- else:
-    self.matrixY[line, column] = frame2.matrixY[line, column]
-'''

@@ -8,8 +8,7 @@
  INICIO     Maio/2015
 """
 
-import Image as Im
-from Tkinter import *
+from tkinter import *
 from Frame import Frame
 
 
