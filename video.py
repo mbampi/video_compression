@@ -7,10 +7,6 @@
  ORIENTACAO Felipe Sampaio
  INICIO     Maio/2015
 """
-from HuffmanTree import ArvoreHuffman
-
-dicio = {'a': 5, 'b': 4, 'c': 3, 'd': 2, 'e': 1}
-
 
 '''
                             # Conferir Arvore Huffman Codigos

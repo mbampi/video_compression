@@ -8,8 +8,9 @@
  INICIO     Maio/2015
 """
 
-from tkinter import *
+from Tkinter import *
 from Frame import Frame
+import Image as Im
 
 
 def save_frame(num, img_name):
@@ -26,7 +27,7 @@ def set_gui():
     frame_num = IntVar()
     img_name = StringVar()
     dicio = Frame.video_specifications()
-    gui.title(" Video Frame Manipulation ")
+    gui.title(" Video Frame Manipulation")
     Label(text="Video Frame Manipulation").grid(row=0, column=0, columnspan=2)
     Label(text="  ").grid(row=1, column=0, columnspan=2)
     Label(text=(dicio['size'], "Bytes")).grid(row=2, column=0, columnspan=2)
@@ -42,3 +43,5 @@ def set_gui():
 
 # MAIN:
 set_gui()
+
+

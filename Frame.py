@@ -11,7 +11,6 @@
 import struct
 import numpy as np
 
-
 class Frame:
 
     def __init__(self):
@@ -57,16 +56,16 @@ class Frame:
         self.video = open("videos/BQSquare_416x240_60.yuv", 'rb')
         char_num = (frame_num * ((240*416)+(120*208)+(120*208)))
         self.video.seek(char_num, 0)
-        self.create_matrix_y()
-        self.create_matrix_cb()
-        self.create_matrix_cr()
+        self.__create_matrix_y()
+        self.__create_matrix_cb()
+        self.__create_matrix_cr()
         self.video.close()
 
 # Cria um Frame de Matrizes Otimizadas (a partir de 2 frames)
     def create_optimized_matrix(self, frame1, frame2):
-        self.create_optimized_matrix_y(frame1, frame2)
-        self.create_optimized_matrix_cb(frame1, frame2)
-        self.create_optimized_matrix_cr(frame1, frame2)
+        self.__create_optimized_matrix_y(frame1, frame2)
+        self.__create_optimized_matrix_cb(frame1, frame2)
+        self.__create_optimized_matrix_cr(frame1, frame2)
 
 
 

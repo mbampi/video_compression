@@ -27,6 +27,7 @@ def create_optimized_frames():
         optimized_frames.append(f)
 
 
+
 # MAIN
 
 frames = []
@@ -34,9 +35,12 @@ optimized_frames = []
 create_frames()
 create_optimized_frames()
 dictionary = optimized_frames[0].repetition_counter()
+'''
+f = Frame()
+f.create_matrix(0)
+dictionary = f.repetition_counter()'''
 # repetition_count = Counter(repetition_count).most_common()  # Organiza por valores (>)
 print(dictionary)
-
 arv = ArvoreHuffman(dictionary)
 arv.create_tree()
 arv.gera_codigo()
